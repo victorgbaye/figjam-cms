@@ -1,0 +1,30 @@
+.panelContainer {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially hidden outside the viewport */
+    width: 300px;
+    height: 100vh;
+    background-color: #f1f1f1;
+    transition: right 0.3s ease;
+  
+    &.open {
+      right: 0; /* Slide in the panel from right */
+    }
+  
+    .panel {
+      padding: 20px;
+  
+      .closeBtn {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+      }
+  
+      .openBtn {
+        margin-top: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+  

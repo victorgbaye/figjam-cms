@@ -1,8 +1,20 @@
 import styles from "./Products.module.scss";
 import Product  from "../../assets/Product.svg";
 import ProductBlack  from "../../assets/ProductBlack.svg";
+import X  from "../../assets/X.svg";
+
+// import Panel from "../../components/compound/Panel/Panel";
+import { useState } from 'react';
+import Input from "../../components/UI/input/Input";
+import Button from "../../components/UI/button/Button";
 
 const Products = () => {
+    const [isPanelOpen, setIsPanelOpen] = useState(false)
+
+    const showPanel = () =>{
+        setIsPanelOpen(!isPanelOpen)
+        console.log('checker');
+    }
   return (
     <div>
         <header className={styles.pageHeader}>
@@ -15,6 +27,7 @@ const Products = () => {
         </section>
         <div>
             <button
+            onClick={showPanel}
             className={styles.productButton}
             >
                 <img src={Product}/>
@@ -48,6 +61,31 @@ const Products = () => {
                 <p>26</p>
             </div>
         </section>
+        {/* panel */}
+        <div className={`${styles.panelContainer} ${isPanelOpen ? styles.open : ''}`}>
+            <div className={styles.panel}>
+                <header className={styles.panelHeader}>
+                    <p>New Product</p>
+                    <img src={X} onClick={showPanel} className={styles.closeBtn}/>
+                </header>
+                <section>
+                    <Input
+                    label="Name"
+                    />
+                </section>
+                
+            </div>
+            <div className={styles.PanelAction}>
+                <Button 
+                 style={{padding:'12px 20px', width:'auto', border:'none', outline:'none', borderRadius:'8px'}}
+                label="Save"/>
+                <Button 
+                 style={{padding:'12px 20px', background:'none', width:'auto', border:'none', outline:'none', borderRadius:'8px', color: '#222'}}
+                label="Cancel"
+                onClick={showPanel}
+                />
+            </div>
+        </div>
 
     </div>
   )
