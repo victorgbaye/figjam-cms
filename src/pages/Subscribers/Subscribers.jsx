@@ -1,5 +1,7 @@
 import styles from './Subscribers.module.scss'
 import SubscribersIcon  from "../../assets/SubscribersIcon.svg";
+import SubscribersWhite from "../../assets/SubscribersWhite.svg";
+
 // import ProductBlack  from "../../assets/ProductBlack.svg";
 const Subscribers = () => {
 
@@ -14,7 +16,7 @@ const Subscribers = () => {
         className={styles.productButton}
        
         >
-            <img src={SubscribersIcon}/>
+            <img src={SubscribersWhite}/>
             Add Subscribers
         </button>
     </div>
@@ -32,10 +34,10 @@ const Subscribers = () => {
         </div>
         <div className={styles.tableBodyFlexContainer}>
             <p>
-                <span>Dashboard</span>
-                <span style={{fontSize:'12px', fontWeight:400, color:'#434343'}}>Data Display</span>
+                <span>John Doe</span>
+                <span style={{fontSize:'12px', fontWeight:400, color:'#434343'}}>John.doe@gmail.com</span>
             </p>
-            <p>26</p>
+            <p>Monthly</p>
         </div>
         <div className={styles.tableBodyFlexContainer}>
             <p>
