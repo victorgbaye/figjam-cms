@@ -1,6 +1,7 @@
 import styles from './Subscribers.module.scss'
 import SubscribersIcon  from "../../assets/SubscribersIcon.svg";
 import SubscribersWhite from "../../assets/SubscribersWhite.svg";
+import filter from "../../assets/filter.svg";
 
 // import ProductBlack  from "../../assets/ProductBlack.svg";
 const Subscribers = () => {
@@ -11,7 +12,7 @@ const Subscribers = () => {
         <img src={SubscribersIcon}/> 
         <p>{window.location.pathname.slice(1)}</p>
     </header>
-    <div>
+    <div className={styles.subscribersHeaderContainer}>
         <button
         className={styles.productButton}
        
@@ -19,6 +20,9 @@ const Subscribers = () => {
             <img src={SubscribersWhite}/>
             Add Subscribers
         </button>
+        <div>
+            <img src={filter}/>
+        </div>
     </div>
     <section className={styles.tableWrapper}>
         <div className={styles.tableHeaderFlexContainer}>

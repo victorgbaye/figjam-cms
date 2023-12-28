@@ -7,6 +7,12 @@
     border-bottom: 1px solid #DAD5CE;
     margin-bottom: 20px;
 }
+.subscribersHeaderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
 .productFilter{
     display: flex;
     align-items: center;
@@ -28,7 +34,8 @@
     background-color: black;
     color: white;
     border-radius: 8px;
-    margin-left: 20px;
+    border: none;
+    // margin-left: 20px;
 
 }
 .tableWrapper{
