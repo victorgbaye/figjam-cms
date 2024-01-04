@@ -1,10 +1,20 @@
-
+.PageWrapper{
+  display: flex;
+  width: 100%;
+}
+.contentWrapper{
+  margin-left: 240px;
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+}
 .pageHeader{
     display: flex;
     align-items: center;
     gap: 12px;
     padding: 10px 20px;
     border-bottom: 1px solid #DAD5CE;
+    
 }
 .productFilter{
     display: flex;

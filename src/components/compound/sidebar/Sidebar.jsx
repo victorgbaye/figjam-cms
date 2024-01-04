@@ -7,11 +7,11 @@ const Sidebar = () => {
     <header className={styles.sidebarHeader}>FIG PLUG</header>
     <ul className={styles.sidebarList}>
         {
-            SidebarData.map((SidebarItem, Key)=>{
+            SidebarData.map((SidebarItem)=>{
                 return(
                     <>
                     <li
-                        key={Key}
+                        
                         className={styles.sidebarItem}
                         id={window.location.pathname === SidebarItem.link ? styles.active : "" }
                         onClick={()=>{window.location.pathname = SidebarItem.link}}
