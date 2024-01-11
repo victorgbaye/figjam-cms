@@ -1,8 +1,8 @@
 .panelContainer {
     position: fixed;
     top: 0;
-    right: -300px; /* Initially hidden outside the viewport */
-    width: 300px;
+    right: -472px; /* Initially hidden outside the viewport */
+    width: 472px;
     height: 100vh;
     background-color: #f1f1f1;
     transition: right 0.3s ease;
@@ -16,8 +16,7 @@
   
       .closeBtn {
         background: none;
-        border: none;
-        font-size: 20px;
+        // font-size: 20px;
         cursor: pointer;
       }
   
@@ -27,4 +26,18 @@
       }
     }
   }
-  
+  .panelHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .PanelAction{
+    position: absolute;
+    // border: 1px solid red;
+    bottom: 55px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }

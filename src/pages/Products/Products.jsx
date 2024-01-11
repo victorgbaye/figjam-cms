@@ -1,13 +1,14 @@
 import styles from "./Products.module.scss";
 import Product  from "../../assets/Product.svg";
 import ProductBlack  from "../../assets/ProductBlack.svg";
-import X  from "../../assets/X.svg";
+// import X  from "../../assets/X.svg";
 
 // import Panel from "../../components/compound/Panel/Panel";
 import { useState } from 'react';
-import Input from "../../components/UI/input/Input";
-import Button from "../../components/UI/button/Button";
+// import Input from "../../components/UI/input/Input";
+// import Button from "../../components/UI/button/Button";
 import Sidebar from "../../components/compound/sidebar/Sidebar";
+import Panel from "../../components/compound/Panel/Panel";
 
 const Products = () => {
     const [isPanelOpen, setIsPanelOpen] = useState(false)
@@ -39,36 +40,36 @@ const Products = () => {
             </div>
             <section className={styles.tableWrapper}>
                 <div className={styles.tableHeaderFlexContainer}>
-                    <p>Name & Description</p>
+                    <p>Name</p>
                     <p>No of Items</p>
                 </div>
                 <div className={styles.tableBodyFlexContainer}>
                     <p>
                         <span>Dashboard</span>
-                        <span style={{fontSize:'12px', fontWeight:400, color:'#434343'}}>Data Display</span>
+                        {/* <span style={{fontSize:'12px', fontWeight:400, color:'#434343'}}>Data Display</span> */}
                     </p>
                     <p>26</p>
                 </div>
                 <div className={styles.tableBodyFlexContainer}>
                     <p>
                         <span>Dashboard</span>
-                        <span style={{fontSize:'12px', fontWeight:400, color:'#434343'}}>Data Display</span>
+                        {/* <span style={{fontSize:'12px', fontWeight:400, color:'#434343'}}>Data Display</span> */}
                     </p>
                     <p>26</p>
                 </div>
                 <div className={styles.tableBodyFlexContainer}>
                     <p>
                         <span>Dashboard</span>
-                        <span style={{fontSize:'12px', fontWeight:400, color:'#434343'}}>Data Display</span>
+                        {/* <span style={{fontSize:'12px', fontWeight:400, color:'#434343'}}>Data Display</span> */}
                     </p>
                     <p>26</p>
                 </div>
             </section>
             {/* panel */}
-            <div className={`${styles.panelContainer} ${isPanelOpen ? styles.open : ''}`}>
-                <div className={styles.panel}>
+            {/* <div className={`${styles.panelContainer} ${isPanelOpen ? styles.open : ''}`}> */}
+                {/* <div className={styles.panel}>
                     <header className={styles.panelHeader}>
-                        <p>New Product</p>
+                        <p>New Category</p>
                         <img src={X} onClick={showPanel} className={styles.closeBtn}/>
                     </header>
                     <section>
@@ -87,8 +88,11 @@ const Products = () => {
                     label="Cancel"
                     onClick={showPanel}
                     />
-                </div>
-            </div>
+                </div> */}
+                <Panel showPanel={isPanelOpen} title="New category">
+                    <p>Hello</p>
+                </Panel>
+            {/* </div> */}
         </main>
 
     </div>
