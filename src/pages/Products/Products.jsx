@@ -9,6 +9,7 @@ import { useState } from 'react';
 // import Button from "../../components/UI/button/Button";
 import Sidebar from "../../components/compound/sidebar/Sidebar";
 import Panel from "../../components/compound/Panel/Panel";
+import Button from "../../components/UI/button/Button";
 
 const Products = () => {
     const [isPanelOpen, setIsPanelOpen] = useState(false)
@@ -25,17 +26,17 @@ const Products = () => {
                 <img src={ProductBlack}/> 
                 <p>{window.location.pathname.slice(1)}</p>
             </header>
-            <section className={styles.productFilter}>
+            {/* <section className={styles.productFilter}>
                 <p className={styles.active}>UI Elements</p>
                 <p>Empty graphics</p>
-            </section>
+            </section> */}
             <div>
                 <button
                 onClick={showPanel}
                 className={styles.productButton}
                 >
                     <img src={Product}/>
-                    New Product
+                    New category
                 </button>
             </div>
             <section className={styles.tableWrapper}>
