@@ -1,32 +1,28 @@
 import PropTypes from 'prop-types';
+import styles from "./Table.module.scss";
 
-const Table = ({data}) => {
+const Table = ({ headers, data }) => {
   return (
     <div>
-        <table>
-            <thead>
-                <tr>
-                {Object.keys(data[0]).map((key) => (
-            <th key={key}>{key}</th>
+        <section className={styles.tableWrapper}>
+                <div className={styles.tableHeaderFlexContainer}>
+                    {headers.map((header, index) => (
+            <p key={index}>{header}</p>
           ))}
-                </tr>
-            </thead>
-            <tbody>
-            {data.map((item, index) => (
-            <tr key={index}>
-                {Object.values(item).map((value, idx) => (
-                <td key={idx}>{value}</td>
-                ))}
-            </tr>
+                </div>
+                {data.map((rowData, rowIndex) => (
+          <div key={rowIndex} className={styles.tableBodyFlexContainer}>
+            {rowData.map((cellData, cellIndex) => (
+              <p key={cellIndex}>{cellData}</p>
+            ))}
+          </div>
         ))}
-            </tbody>
-        </table>
+            </section>
     </div>
   )
 }
 Table.propTypes = {
-    data: PropTypes.arrayOf(
-      PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number]))
-    ).isRequired,
-  };
+  headers: PropTypes.arrayOf(PropTypes.string).isRequired,
+  data: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.node)).isRequired,
+};
 export default Table

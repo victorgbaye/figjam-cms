@@ -4,7 +4,7 @@
     right: -472px; /* Initially hidden outside the viewport */
     width: 472px;
     height: 100vh;
-    background-color: #f1f1f1;
+    background-color: #fff;
     transition: right 0.3s ease;
   
     &.open {

@@ -9,7 +9,7 @@ const Panel = ({ title, showPanel, onClose, children, }) => {
 //   const togglePanel = () => {
 //     setIsOpen(!isOpen);
 //   };
-
+ 
 
   return (
     <div className={`${styles.panelContainer} ${showPanel ? styles.open : ''}`}>
@@ -26,6 +26,7 @@ const Panel = ({ title, showPanel, onClose, children, }) => {
           <Button 
           style={{padding:'12px 20px', background:'none', width:'auto', border:'none', outline:'none', borderRadius:'8px', color: '#222'}}
           label="Cancel"
+          onClick={onClose}
           // onClick={showPanel}
           />
       </footer> 

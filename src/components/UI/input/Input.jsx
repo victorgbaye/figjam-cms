@@ -50,5 +50,31 @@ AccountInput.propTypes = {
   };
 
 
+  export const SelectInput = ({ label, options, onChange, value }) => {
+    return (
+      <>
+         <label>{label}</label>
+        <select value={value} onChange={onChange} className={styles.Select}>
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </>
+    );
+  };
+
+  SelectInput.propTypes = {
+    label: PropTypes.string,
+    options: PropTypes.arrayOf(
+      PropTypes.shape({
+        value: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+    onChange: PropTypes.func.isRequired,
+    value: PropTypes.string.isRequired,
+  };
 
 export default Input

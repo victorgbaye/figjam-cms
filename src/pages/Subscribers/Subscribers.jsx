@@ -2,12 +2,16 @@ import styles from './Subscribers.module.scss'
 import SubscribersIcon  from "../../assets/SubscribersIcon.svg";
 import SubscribersWhite from "../../assets/SubscribersWhite.svg";
 import filter from "../../assets/filter.svg";
+import Sidebar from '../../components/compound/sidebar/Sidebar';
 
 // import ProductBlack  from "../../assets/ProductBlack.svg";
 const Subscribers = () => {
 
   return (
-    <div>
+    <div className={styles.PageWrapper}>
+        <Sidebar/>
+        <div className={styles.contentWrapper}>
+            
     <header className={styles.pageHeader}>
         <img src={SubscribersIcon}/> 
         <p>{window.location.pathname.slice(1)}</p>
@@ -51,6 +55,7 @@ const Subscribers = () => {
             <p>26</p>
         </div>
     </section>
+        </div>
 
 </div>
   )

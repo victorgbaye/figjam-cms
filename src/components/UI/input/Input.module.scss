@@ -15,7 +15,15 @@
 
 
 
-
+label{
+    color:  #383838;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 19.2px */
+    letter-spacing: 0.204px;
+    text-transform: capitalize;
+}
 
 .AccountInputContainer{
     border-bottom: 1px solid #EDEBE7;
@@ -31,4 +39,13 @@
    outline: none;
    border: none;
    width: 100%;
+}
+
+.Select{
+    appearance: none; 
+    width: 100%;
+    padding: 11px 16px;
+    border-radius: 8px;
+    border: 1px solid #E3E3E3;
+    padding-right: 160px;
 }
